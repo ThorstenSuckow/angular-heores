@@ -17,5 +17,11 @@ export class HeroService {
     this.messageService.add("Heroes have assembled!");
     return heroes;
   }
+  getHero(id: Number): Observable<Hero> {
+    this.messageService.add(`Paging ONE Hero ${id}...`);
+    const hero = HEROES.find(hero => hero.id === id)!;
+    this.messageService.add("Hero is up and ready to save your day!");
+    return of(hero);
+  }
 
 }
