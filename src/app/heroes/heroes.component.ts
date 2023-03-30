@@ -31,10 +31,5 @@ export class HeroesComponent {
     );
   }
 
-  onSelectHero (hero: Hero):void {
-    this.selectedHero = hero;
-    this.messageService.add(`Chose your hero id=${hero.id}`);
-  }
-
 
 }
